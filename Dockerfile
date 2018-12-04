@@ -10,3 +10,5 @@ RUN apk add --update --virtual .build-deps \
  && apk del .build-deps \
  && rm -rf /var/cache/apk/* \
            /home/fluent/.gem/ruby/2.5.0/cache/*.gem
+           
+ RUN chmod 644 /var/lib/gems/2.5.0/gems/fluent-plugin-detect-exceptions-0.0.11/lib/fluent/plugin/exception_detector.rb
