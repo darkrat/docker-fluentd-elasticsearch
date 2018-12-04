@@ -2,6 +2,7 @@ FROM fluent/fluentd:v1.3-onbuild
 
 RUN apk add --update --virtual .build-deps \
         sudo build-base ruby-dev \
+ && gem install fluent-plugin-detect-exceptions \
  && apk add --no-cache git \
  && gem install specific_install \
  && sudo gem specific_install https://github.com/darkrat/fluent-plugin-elasticsearch.git\
